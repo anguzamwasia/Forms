@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Data Collection Form</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+
+   <!-- Load static files using the {% static %} tag -->
+   {% load static %}
+
+</head>
+<body>
+  <div class="form-container">
+    <h1>Data Collection Form</h1>
+    <form id="dataForm">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      
+      <div id="map" style="height: 300px; margin: 20px 0;"></div>
+      <input type="hidden" id="latitude" name="latitude">
+      <input type="hidden" id="longitude" name="longitude">
+      <button type="submit">Submit</button>
+    </form>
+    <p id="status"></p>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="E:/Learning/Forms/Frontend/app.js"></script>
+</body>
+</html>
